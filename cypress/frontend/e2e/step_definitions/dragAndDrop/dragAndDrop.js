@@ -2,7 +2,7 @@ import { Given, When, Then, And } from 'cypress-cucumber-preprocessor/steps'
 const dataTransfer = new DataTransfer();
 
 
-Given("I'm in the drag an drop page", () => {
+Given("I'm in the drag and drop page", () => {
     
     cy.visit("/drag_and_drop")
 })
