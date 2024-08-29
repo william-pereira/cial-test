@@ -4,7 +4,7 @@ Feature: Upload file
 Scenario: Upload file with success using the file upload input
 Given I'm in the upload file page
 When I select an image clicking on the file upload input
-And I click on Upload button
+And I click on the upload button
 Then I should see the image name and a title 'File Uploaded!' on the page
 
 
