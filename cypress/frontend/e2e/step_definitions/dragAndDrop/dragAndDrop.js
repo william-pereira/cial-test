@@ -8,6 +8,7 @@ Given("I'm in the drag and drop page", () => {
 })
 
 When("I drag the box A and drop to box B", () => {
+    cy.log('event to mouse click on box and drop in other box')
     cy.get('#column-a')
       .trigger('dragstart', { dataTransfer })
       .get('#column-b')
@@ -20,6 +21,7 @@ When("I drag the box A and drop to box B", () => {
   });
 
 When("I drag the box B and drop to box A", () => {
+    cy.log('event to mouse click on box and drop in other box')
     cy.get('#column-b')
       .trigger('dragstart', { dataTransfer })
       .get('#column-a')
@@ -32,6 +34,7 @@ When("I drag the box B and drop to box A", () => {
   });  
 
 Then("I should see the box B on left side and box A on right side", () => {
+    cy.log('validating the columns on A and B side')
     cy.get('#column-a').should('contain', 'B');
     cy.get('#column-b').should('contain', 'A');
 
