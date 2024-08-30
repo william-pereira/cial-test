@@ -33,6 +33,7 @@ The project structure is organized to ensure easy maintenance and readability:
 - **support/locators.json:** This file centralizes all locators and variables used in the tests, promoting reuse and simplified maintenance.
 
 - **fixtures/images:** Stores all images used in the project, keeping a clear organization for media references.
+  
 
 ## Installation
 
@@ -42,6 +43,22 @@ To install the project dependencies, run:
 npm install
 ~~~
 
+## Running the Tests
+
+To run the tests, use the command:
+
+~~~bash
+npx cypress open
+~~~
+This will open the Cypress interface, where you can select and run the tests.
+
+To run the tests on headless mode, use the command:
+
+~~~bash
+npx cypress run
+~~~
+
+
 ## Plugins Used
 
 This project uses the following plugins:
@@ -49,6 +66,8 @@ This project uses the following plugins:
 - [@4tw/cypress-drag-drop](https://www.npmjs.com/package/@4tw/cypress-drag-drop): Plugin for simulating drag-and-drop operations.
 - [cypress-cucumber-preprocessor](https://www.npmjs.com/package/cypress-cucumber-preprocessor): Integration of Cypress with Cucumber for writing tests in BDD format.
 - [cypress-file-upload](https://www.npmjs.com/package/cypress-file-upload): Used for simulating file uploads during tests.
+
+
 
 ## Test Structure
 The tests are written in BDD format, with .feature files defining functionalities and scenarios, and .cy.js files implementing the necessary actions and assertions.
@@ -78,8 +97,8 @@ Feature: Checkbox
 1. Clone the Project Repository
 
   ~~~bash
-  git clone https://github.com/william-pereira/cial-test-backend.git
-  cd cial-test-backend
+  git clone https://github.com/william-pereira/cial-test-frontend.git
+  cd cial-test-frontend
   ~~~
 
 2. Build the Docker Image
@@ -95,11 +114,11 @@ Depending on your operating system, use the appropriate command to mount the cur
 - For Linux 
 
 ~~~bash
-docker run -i -v "$PWD:/cial-test-backend" cial-test-backend:1.0.0 --spec "/cial-test/cypress/e2e/DeviceService/*.js
+docker run -i -v "$PWD:/cial-test" cial-test:1.0.0 --spec "/cial-test/cypress/frontend/e2e/step_definitions/*.feature"
 ~~~
 
 - For Windows
 
 ~~~bash
-docker run -i -v "%CD%:/cial-test-backend" cial-test-backend:1.0.0 --spec "/cial-test/cypress/e2e/DeviceService/*.js
+docker run -i -v "%cd%:/cial-test" cial-test:1.0.0 --spec "/cial-test/cypress/frontend/e2e/step_definitions/*.feature"
 ~~~
