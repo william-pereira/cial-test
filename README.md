@@ -2,6 +2,12 @@
 
 This project uses Cypress for test automation on the frontend, structured with Cucumber to facilitate writing tests in BDD (Behavior-Driven Development) format.
 
+## Requirements
+
+- Node.js (version 20 or higher)
+- NPM (version 10 or higher)
+- Docker (version 24 or higher)
+
 ## Project Structure
 
 The project structure is organized to ensure easy maintenance and readability:
