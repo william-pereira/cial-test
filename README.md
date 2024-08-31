@@ -114,7 +114,7 @@ Depending on your operating system, use the appropriate command to mount the cur
 - For Linux 
 
 ~~~bash
-docker run -i -v "$PWD:/cial-test-frontend" cial-test:1.0.0 --spec "/cial-test-frontend/cypress/frontend/e2e/step_definitions/*.feature"
+docker run -i -v "$PWD:/cial-test-frontend" -t cial-test:1.0.0 --spec "cypress/frontend/e2e/step_definitions/*.feature"
 ~~~
 
 - For Windows
